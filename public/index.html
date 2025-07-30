@@ -49,6 +49,9 @@
       height: 400px;
       margin-top: 20px;
     }
+    .chart1 {
+      height: 400px !important;
+    }
     .interchange-button {
       display: flex;
       justify-content: center;
@@ -122,9 +125,16 @@
     <!-- Chart Section -->
     <div id="chart"></div>
   </div>
+  <footer>
+    <hr style="margin-bottom: 10px; opacity: 0.2;">
+    Architected and Copyrights by: <strong>Mudassir Shahzad</strong>
+  </footer>
 
   <script>
     function calculate() {
+
+      document.getElementById("chart").classList.add("chart1");
+      
       const startingPrice = parseFloat(document.querySelector('.startingPrice').value) || 0;
       const endingPrice = parseFloat(document.querySelector('.endingPrice').value) || 0;
       const lotSize = parseFloat(document.querySelector('.lotSize').value) || 0;
